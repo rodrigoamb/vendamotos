@@ -13,6 +13,7 @@ import { useState } from "react";
 
 //react-router-dom
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
 
 const Products = () => {
 	const [dataMotorBikes, setDataMotorBikes] = useState([
@@ -100,6 +101,7 @@ const Products = () => {
 					))}
 				</div>
 			</ContainerProducts>
+			<Footer />
 		</>
 	);
 };

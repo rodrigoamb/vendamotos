@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { themes } from "../../themes/colors";
 
 export const ContainerProducts = styled.div`
+	height: 80vh;
+
 	.limit-content {
 		margin: auto;
 		width: 90%;

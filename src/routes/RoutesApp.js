@@ -5,14 +5,17 @@ import { Routes, Route } from "react-router-dom";
 import Login from "../pages/Login";
 import Products from "../pages/Products";
 import Details from "../pages/Details";
+import Purchase from "../pages/Purchase";
 
 const RoutesApp = () => {
 	return (
 		<Routes>
 			<Route path="/" element={<Login />} />
 
-			<Route path="/products" element={<Products />} />
-			<Route path="/products/:id" element={<Details />} />
+			<Route path="/produtos" element={<Products />} />
+			<Route path="/produtos/:id" element={<Details />} />
+
+			<Route path="/comprar/:id" element={<Purchase />} />
 
 			{/* <Route path="/user" element={<User />} />
 

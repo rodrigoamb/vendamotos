@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { themes } from "../../themes/colors";
 
 export const ContainerDetails = styled.div`
+	margin-bottom: 50px;
+
 	.limit-content {
 		margin: auto;
 		width: 90%;
@@ -18,25 +20,6 @@ export const ContainerDetails = styled.div`
 			text-transform: uppercase;
 			font-size: 2rem;
 			margin-bottom: 25px;
-		}
-	}
-
-	.container-backPage {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		margin-bottom: 15px;
-		cursor: pointer;
-		text-decoration: none;
-		color: #000000;
-
-		.icon-arrow {
-			font-size: 1.8rem;
-			margin-right: 10px;
-		}
-
-		span {
-			font-size: 1.5rem;
 		}
 	}
 
@@ -59,7 +42,7 @@ export const ContainerDetails = styled.div`
 	.container-engine-amount {
 		div {
 			font-size: 1.2rem;
-			margin-bottom: 25px;
+			margin-bottom: 15px;
 			font-weight: bold;
 		}
 
