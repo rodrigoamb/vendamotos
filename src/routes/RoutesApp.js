@@ -7,6 +7,8 @@ import Products from "../pages/Products";
 import Details from "../pages/Details";
 import Purchase from "../pages/Purchase";
 import Register from "../pages/Register";
+import ConfigPage from "../pages/ConfigPage";
+import ErrorPage from "../pages/ErrorPage";
 
 const RoutesApp = () => {
 	return (
@@ -20,9 +22,9 @@ const RoutesApp = () => {
 
 			<Route path="/cadastro" element={<Register />} />
 
-			{/* <Route path="/user" element={<User />} />
+			<Route path="/config" element={<ConfigPage />} />
 
-			<Route path="*" element={<ErrorPage />} /> */}
+			<Route path="*" element={<ErrorPage />} />
 		</Routes>
 	);
 };
