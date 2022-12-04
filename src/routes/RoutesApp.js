@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Products from "../pages/Products";
 import Details from "../pages/Details";
 import Purchase from "../pages/Purchase";
+import Register from "../pages/Register";
 
 const RoutesApp = () => {
 	return (
@@ -16,6 +17,8 @@ const RoutesApp = () => {
 			<Route path="/produtos/:id" element={<Details />} />
 
 			<Route path="/comprar/:id" element={<Purchase />} />
+
+			<Route path="/cadastro" element={<Register />} />
 
 			{/* <Route path="/user" element={<User />} />
 

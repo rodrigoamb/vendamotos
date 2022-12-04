@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { themes } from "../../themes/colors";
-
 export const ContainerPurchase = styled.div`
 	min-height: 80vh;
 
@@ -24,6 +22,7 @@ export const ContainerPurchase = styled.div`
 		text-transform: uppercase;
 		font-size: 1.5rem;
 		border-radius: 10px;
+		margin-bottom: 30px;
 
 		img {
 			width: 100px;
@@ -40,49 +39,8 @@ export const ContainerPurchase = styled.div`
 		align-items: center;
 	}
 
-	.container-add-remove {
-		display: flex;
-		align-items: center;
-
-		.icon-add {
-			cursor: pointer;
-			font-size: 2rem;
-			color: green;
-			margin-right: 10px;
-		}
-
-		span {
-			font-size: 1.3rem;
-			font-weight: bold;
-			margin-right: 10px;
-		}
-
-		.icon-remove {
-			cursor: pointer;
-			font-size: 2rem;
-			color: red;
-			margin-right: 30px;
-		}
-
-		button {
-			cursor: pointer;
-			text-decoration: none;
-			font-size: 1.1rem;
-			background-color: ${themes.color.secondaryColor};
-			padding: 10px 20px;
-			border-radius: 8px;
-			color: ${themes.color.secondaryText};
-			transition: all 0.5s;
-			border: none;
-			font-weight: bold;
-			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-			margin-right: 30px;
-
-			&:hover {
-				background-color: ${themes.color.secondaryColorHover};
-				color: #aaaaaa;
-			}
-		}
+	.mensage {
+		font-size: 1.5rem;
 	}
 `;
 

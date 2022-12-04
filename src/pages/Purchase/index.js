@@ -9,7 +9,6 @@ import Footer from "../../components/Footer";
 
 //icons
 import { FaMoneyBillWave } from "react-icons/fa";
-import { IoRemoveCircle, IoAddCircle } from "react-icons/io5";
 
 const Purchase = () => {
 	const data = {
@@ -29,7 +28,7 @@ const Purchase = () => {
 			<NavBar />
 			<ContainerPurchase>
 				<div className="limit-content">
-					<Title title="Carrinho de compras">
+					<Title title="Finalização da compra">
 						<FaMoneyBillWave className="icon-title" />
 					</Title>
 
@@ -42,16 +41,16 @@ const Purchase = () => {
 							<img className="img-bike" src={data.image} alt="motorcycle" />
 
 							<span className="row-product">
-								{data.name} - {data.brand}
+								{data.name} - {data.brand} - {data.engine}
 							</span>
 						</div>
 
-						<div className="container-add-remove">
-							<IoAddCircle className="icon-add" />
-							<span>Quantidade: 01</span>
-							<IoRemoveCircle className="icon-remove" />
-							<button>Comprar</button>
-						</div>
+						<div>Compra finalizada com sucesso!</div>
+					</div>
+
+					<div className="mensage">
+						Aguarde! Você será redirecionado para página inicial em 3
+						segundos...
 					</div>
 				</div>
 			</ContainerPurchase>

@@ -13,6 +13,8 @@ const NavBar = () => {
 		"Sair",
 	];
 
+	const to = ["/produtos", "/cadastro", "/config", "/"];
+
 	return (
 		<ContainerNavBar>
 			<div className="limit-content">
@@ -24,7 +26,9 @@ const NavBar = () => {
 					<ul>
 						{options.map((item, index) => (
 							<li key={index}>
-								<Link className="link-btn">{item}</Link>
+								<Link to={to[index]} className="link-btn">
+									{item}
+								</Link>
 							</li>
 						))}
 					</ul>
