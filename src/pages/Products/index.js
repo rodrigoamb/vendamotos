@@ -4,6 +4,7 @@ import { ContainerProducts } from "./styles";
 //components
 import NavBar from "../../components/NavBar";
 import Title from "../../components/Title";
+import Loading from "../../components/Loading";
 
 //icons
 import { RiMotorbikeFill } from "react-icons/ri";
@@ -12,49 +13,36 @@ import { RiMotorbikeFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 
+//hooks react
+import { useState, useEffect } from "react";
+
+//notification
+import { toast } from "react-toastify";
+
+const url = "http://localhost:3000/produtos";
+
 const Products = () => {
-	const dataMotorBikes = [
-		{
-			image:
-				"https://www3.yamaha-motor.com.br/ccstore/v1/images/?source=/file/v6796015611559629740/products/30055-30055-MTSERIES-MT03-321-ABS-CONDICAO1-YAMAHA.png&height=300&width=300",
-			name: "MT-03 ABS",
-			brand: "yamaha",
-			engine: "321cc",
-			price: "R$30.890,00",
-			description:
-				"A performance esportiva que você sempre buscou. Com 321 cc, desenvolve 42 cv e 3,0 kgf.m de torque. Conta com a exclusiva tecnologia DiASil que contribui para menor vibração, melhor dissipação de calor e ganho de performance. Projetado para auxiliar sua performance, o painel da MT-03 é o único da categoria que possui a luz indicativa Shift Light personalizável, que indica o melhor momento para a troca de marchas. Sua ótima posição de pilotagem, complementada pelas 7 regulagens de pré-carga na mola e a nova suspensão dianteira invertida, fazem da MT-03 a mais equilibrada street fighter para uso diário com performance e conforto. ",
-		},
-		{
-			image:
-				"https://www3.yamaha-motor.com.br/ccstore/v1/images/?source=/file/v6796015611559629740/products/30055-30055-MTSERIES-MT03-321-ABS-CONDICAO1-YAMAHA.png&height=300&width=300",
-			name: "MT-03 ABS",
-			brand: "yamaha",
-			engine: "321cc",
-			price: "R$30.890,00",
-			description:
-				"A performance esportiva que você sempre buscou. Com 321 cc, desenvolve 42 cv e 3,0 kgf.m de torque. Conta com a exclusiva tecnologia DiASil que contribui para menor vibração, melhor dissipação de calor e ganho de performance. Projetado para auxiliar sua performance, o painel da MT-03 é o único da categoria que possui a luz indicativa Shift Light personalizável, que indica o melhor momento para a troca de marchas. Sua ótima posição de pilotagem, complementada pelas 7 regulagens de pré-carga na mola e a nova suspensão dianteira invertida, fazem da MT-03 a mais equilibrada street fighter para uso diário com performance e conforto. ",
-		},
-		{
-			image:
-				"https://www3.yamaha-motor.com.br/ccstore/v1/images/?source=/file/v6796015611559629740/products/30055-30055-MTSERIES-MT03-321-ABS-CONDICAO1-YAMAHA.png&height=300&width=300",
-			name: "MT-03 ABS",
-			brand: "yamaha",
-			engine: "321cc",
-			price: "R$30.890,00",
-			description:
-				"A performance esportiva que você sempre buscou. Com 321 cc, desenvolve 42 cv e 3,0 kgf.m de torque. Conta com a exclusiva tecnologia DiASil que contribui para menor vibração, melhor dissipação de calor e ganho de performance. Projetado para auxiliar sua performance, o painel da MT-03 é o único da categoria que possui a luz indicativa Shift Light personalizável, que indica o melhor momento para a troca de marchas. Sua ótima posição de pilotagem, complementada pelas 7 regulagens de pré-carga na mola e a nova suspensão dianteira invertida, fazem da MT-03 a mais equilibrada street fighter para uso diário com performance e conforto. ",
-		},
-		{
-			image:
-				"https://www3.yamaha-motor.com.br/ccstore/v1/images/?source=/file/v6796015611559629740/products/30055-30055-MTSERIES-MT03-321-ABS-CONDICAO1-YAMAHA.png&height=300&width=300",
-			name: "MT-03 ABS",
-			brand: "yamaha",
-			engine: "321cc",
-			price: "R$30.890,00",
-			description:
-				"A performance esportiva que você sempre buscou. Com 321 cc, desenvolve 42 cv e 3,0 kgf.m de torque. Conta com a exclusiva tecnologia DiASil que contribui para menor vibração, melhor dissipação de calor e ganho de performance. Projetado para auxiliar sua performance, o painel da MT-03 é o único da categoria que possui a luz indicativa Shift Light personalizável, que indica o melhor momento para a troca de marchas. Sua ótima posição de pilotagem, complementada pelas 7 regulagens de pré-carga na mola e a nova suspensão dianteira invertida, fazem da MT-03 a mais equilibrada street fighter para uso diário com performance e conforto. ",
-		},
-	];
+	const [dataMotorBikes, setDataMotorBikes] = useState([]);
+	const [loadingIsVisible, setLoadingIsVisible] = useState(false);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			setLoadingIsVisible(true);
+
+			try {
+				const res = await fetch(url);
+				const data = await res.json();
+				setDataMotorBikes(data);
+				setLoadingIsVisible(false);
+			} catch (error) {
+				toast.error("Um erro aconteceu ao carregar os dados");
+				console.log(error);
+				setLoadingIsVisible(false);
+			}
+		};
+
+		fetchData();
+	}, []);
 
 	return (
 		<>
@@ -65,30 +53,34 @@ const Products = () => {
 						<RiMotorbikeFill className="icon-title" />
 					</Title>
 
-					{dataMotorBikes.map((item, index) => (
-						<div className="container-row-list" key={index}>
-							<div className="square-image">
-								<img src={item.image} alt="motorbike" />
-							</div>
-
-							<div className="container-title font-bold">
-								<span className="name-bike">{item.name}</span>
-								<span className="brand-bike">{item.brand}</span>
-							</div>
-
-							<div>
-								<span className="font-bold">Cilindradas: </span>
-								{item.engine}
-							</div>
-							<div>
-								<span className="font-bold">Preço: </span> {item.price}
-							</div>
-
-							<Link to="/" className="details-btn">
-								Ver detalhes
-							</Link>
+					{loadingIsVisible ? (
+						<div className="container-loading">
+							<Loading />
 						</div>
-					))}
+					) : (
+						dataMotorBikes?.map((item, index) => (
+							<div className="container-row-list" key={index}>
+								<div className="container-info">
+									<div className="square-image fix-width">
+										<img src={item.image} alt="motorbike" />
+									</div>
+									<div className="container-title font-bold fix-width">
+										<span className="name-bike">{item.name}</span>
+										<span className="brand-bike">{item.brand}</span>
+									</div>
+									<span className="font-bold fix-width">Cilindradas: </span>
+									{item.engine}cc
+								</div>
+
+								<Link
+									to={`/produtos/${item.id}`}
+									className="details-btn fix-width"
+								>
+									Ver detalhes
+								</Link>
+							</div>
+						))
+					)}
 				</div>
 			</ContainerProducts>
 			<Footer />

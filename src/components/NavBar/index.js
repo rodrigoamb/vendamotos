@@ -61,6 +61,12 @@ const NavBar = () => {
 						</li>
 
 						<li>
+							<Link to="/vendas" className="link-btn">
+								Vendas
+							</Link>
+						</li>
+
+						<li>
 							<Link to="/config" className="link-btn">
 								Configurações
 							</Link>

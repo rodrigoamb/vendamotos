@@ -30,6 +30,9 @@ export const ContainerDetails = styled.div`
 		margin-bottom: 50px;
 
 		img {
+			width: 300px;
+			height: 300px;
+			object-fit: contain;
 			margin-right: 30px;
 		}
 

@@ -22,17 +22,29 @@ export const ContainerProducts = styled.div`
 		border-left: 15px solid ${themes.color.secondaryColor};
 		font-size: 1.1rem;
 
+		.container-info {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
 		.square-image {
 			background-color: #aaaaaa;
 
 			img {
 				width: 100px;
+				height: 100px;
+				object-fit: contain;
 			}
 		}
 
 		.container-title {
 			display: flex;
 			flex-direction: column;
+			text-transform: uppercase;
+			width: 150px;
+			margin-left: 30px;
+			margin-right: 30px;
 		}
 
 		.details-btn {
@@ -52,6 +64,20 @@ export const ContainerProducts = styled.div`
 		.font-bold {
 			font-weight: bold;
 		}
+
+		.fix-width {
+		}
+	}
+
+	.container-loading {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 150px;
+		margin: auto;
+		background-color: ${themes.color.primaryColor};
+		border-radius: 10px;
+		padding: 30px;
 	}
 `;
 

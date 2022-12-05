@@ -1,0 +1,20 @@
+{
+	"produtos": [
+		{
+			"id": 1,
+			"image": "https://www3.yamaha-motor.com.br/ccstore/v1/images/?source=/file/v6796015611559629740/products/30055-30055-MTSERIES-MT03-321-ABS-CONDICAO1-YAMAHA.png&height=300&width=300",
+			"name": "MT-03 ABS",
+			"brand": "yamaha",
+			"engine": 321,
+			"description": "A performance esportiva que você sempre buscou. Com 321 cc, desenvolve 42 cv e 3,0 kgf.m de torque. Conta com a exclusiva tecnologia DiASil que contribui para menor vibração, melhor dissipação de calor e ganho de performance. Projetado para auxiliar sua performance, o painel da MT-03 é o único da categoria que possui a luz indicativa Shift Light personalizável, que indica o melhor momento para a troca de marchas. Sua ótima posição de pilotagem, complementada pelas 7 regulagens de pré-carga na mola e a nova suspensão dianteira invertida, fazem da MT-03 a mais equilibrada street fighter para uso diário com performance e conforto. "
+		},
+		{
+			"name": "faser 150 abs",
+			"brand": "yamaha",
+			"engine": "150",
+			"image": "https://www.tapajosmotocenter.com.br/wp-content/uploads/2022/02/Fazer_150_3.png",
+			"description": "O painel da Fazer 150 UBS mostra tudo que você precisa saber: o conta-giros é analógico e o display digital possui indicador de marcha, relógio, função trip, indicador do nível de combustível e função ECO, que indica se você está pilotando de modo mais econômico.",
+			"id": 2
+		}
+	]
+}
