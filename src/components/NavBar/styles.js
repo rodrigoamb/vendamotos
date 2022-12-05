@@ -20,6 +20,12 @@ export const ContainerNavBar = styled.header`
 		margin-bottom: 20px;
 	}
 
+	span {
+		color: #fff;
+		font-size: 1.1rem;
+		font-weight: bold;
+	}
+
 	nav {
 		width: 40%;
 

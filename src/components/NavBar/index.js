@@ -5,32 +5,72 @@ import { ContainerNavBar } from "./styles";
 import logo from "../../assets/logomoto.png";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
-	const options = [
-		"Lista de Motos",
-		"Cadastrar Motos",
-		"Configurações",
-		"Sair",
-	];
+//import firebase auth
+import { auth } from "../../firebase/firebaseConnection";
+import { signOut } from "firebase/auth";
 
-	const to = ["/produtos", "/cadastro", "/config", "/"];
+//hooks react
+import { useEffect, useState } from "react";
+
+const NavBar = () => {
+	const [email, setEmail] = useState("");
+
+	useEffect(() => {
+		const verifyUser = () => {
+			const user = localStorage.getItem("@detailUser");
+
+			if (user) {
+				const userDetail = JSON.parse(user);
+				setEmail(userDetail.email);
+				return;
+			} else {
+				return;
+			}
+		};
+
+		verifyUser();
+	}, []);
+
+	async function handleLogout() {
+		await signOut(auth).then(() => {
+			localStorage.removeItem("@detailUser");
+		});
+	}
 
 	return (
 		<ContainerNavBar>
 			<div className="limit-content">
-				<Link to={"/"}>
+				<Link to={"/produtos"}>
 					<img src={logo} alt="logo Motorcycle" />
 				</Link>
 
+				<span>Usuário: {email}</span>
+
 				<nav>
 					<ul>
-						{options.map((item, index) => (
-							<li key={index}>
-								<Link to={to[index]} className="link-btn">
-									{item}
-								</Link>
-							</li>
-						))}
+						<li>
+							<Link to="/produtos" className="link-btn">
+								Lista de Motos
+							</Link>
+						</li>
+
+						<li>
+							<Link to="/cadastro" className="link-btn">
+								Cadastrar Moto
+							</Link>
+						</li>
+
+						<li>
+							<Link to="/config" className="link-btn">
+								Configurações
+							</Link>
+						</li>
+
+						<li>
+							<Link onClick={handleLogout} className="link-btn">
+								Sair
+							</Link>
+						</li>
 					</ul>
 				</nav>
 			</div>
