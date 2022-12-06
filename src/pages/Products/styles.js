@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { themes } from "../../themes/colors";
 
 export const ContainerProducts = styled.div`
-	height: 80vh;
+	padding-bottom: 180px;
 
 	.limit-content {
 		margin: auto;
@@ -88,6 +88,35 @@ export const ContainerProducts = styled.div`
 		background-color: ${themes.color.primaryColor};
 		border-radius: 10px;
 		padding: 30px;
+	}
+
+	@media (max-width: 1000px) {
+		.container-row-list {
+			flex-direction: column;
+			border: 3px solid ${themes.color.secondaryColor};
+			padding: 30px;
+			text-align: center;
+
+			.container-info {
+				flex-direction: column;
+				flex-wrap: nowrap;
+			}
+
+			.square-image {
+				background-color: #aaaaaa;
+
+				img {
+					width: 270px;
+					height: 270px;
+					object-fit: contain;
+				}
+			}
+
+			.price {
+				margin-left: 0px;
+				margin: 10px 0px;
+			}
+		}
 	}
 `;
 

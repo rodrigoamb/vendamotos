@@ -3,7 +3,12 @@ import { ContainerNavBar } from "./styles";
 
 //assets
 import logo from "../../assets/logomoto.png";
+
+//react-router-dom
 import { Link } from "react-router-dom";
+
+//icons
+import { IoMdMenu } from "react-icons/io";
 
 //import firebase auth
 import { auth } from "../../firebase/firebaseConnection";
@@ -45,6 +50,8 @@ const NavBar = () => {
 				</Link>
 
 				<span>Usuário: {email}</span>
+
+				<IoMdMenu className="icon-MenuBurger" />
 
 				<nav>
 					<ul>

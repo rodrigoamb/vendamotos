@@ -27,7 +27,7 @@ export const ContainerNavBar = styled.header`
 	}
 
 	nav {
-		width: 40%;
+		width: 60%;
 
 		ul {
 			display: flex;
@@ -47,6 +47,28 @@ export const ContainerNavBar = styled.header`
 					background-color: ${themes.color.secondaryColorHover};
 				}
 			}
+		}
+	}
+
+	.icon-MenuBurger {
+		display: none;
+		font-size: 2.8rem;
+		color: #fff;
+	}
+
+	@media (max-width: 1150px) {
+		nav {
+			display: none;
+		}
+
+		.icon-MenuBurger {
+			display: block;
+		}
+	}
+
+	@media (max-width: 410px) {
+		span {
+			display: none;
 		}
 	}
 `;

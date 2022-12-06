@@ -101,5 +101,24 @@ export const ContainerDetails = styled.div`
 			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 		}
 	}
+
+	@media (max-width: 700px) {
+		.container-info {
+			flex-direction: column;
+
+			img {
+				width: 95%;
+				margin: auto;
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		form {
+			input {
+				width: 100%;
+			}
+		}
+	}
 `;
 

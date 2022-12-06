@@ -39,8 +39,14 @@ export const ContainerPurchase = styled.div`
 		align-items: center;
 	}
 
-	.mensage {
-		font-size: 1.5rem;
+	@media (max-width: 500px) {
+		.container-img-name {
+			margin-bottom: 15px;
+		}
+
+		.frame-product {
+			flex-direction: column;
+		}
 	}
 `;
 
