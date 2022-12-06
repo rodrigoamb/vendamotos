@@ -69,6 +69,16 @@ export const ContainerProducts = styled.div`
 		}
 	}
 
+	.price {
+		background-color: #000;
+		color: #fff;
+		width: 200px;
+		padding: 10px 20px;
+		border-radius: 8px;
+		text-align: center;
+		margin-left: 30px;
+	}
+
 	.container-loading {
 		display: flex;
 		align-items: center;

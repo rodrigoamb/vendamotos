@@ -61,11 +61,44 @@ export const ContainerDetails = styled.div`
 			border: none;
 			font-weight: bold;
 			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+			max-width: 350px;
 
 			&:hover {
 				background-color: ${themes.color.secondaryColorHover};
 				color: #aaaaaa;
 			}
+		}
+	}
+
+	.price {
+		width: 90%;
+		background-color: #000;
+		color: #fff;
+		max-width: 200px;
+		text-align: center;
+		padding: 10px 20px;
+		border-radius: 8px;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+
+		label {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+
+		input {
+			font-size: 1.1rem;
+			width: 90%;
+			max-width: 350px;
+			border: none;
+			height: 35px;
+			border-radius: 8px;
+			padding: 5px 10px;
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 		}
 	}
 `;

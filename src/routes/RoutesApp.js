@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "../pages/Login";
 import Products from "../pages/Products";
 import Details from "../pages/Details";
-import Purchase from "../pages/Purchase";
+import Sale from "../pages/Sale";
 import Register from "../pages/Register";
 import ConfigPage from "../pages/ConfigPage";
 import ErrorPage from "../pages/ErrorPage";
@@ -35,10 +35,10 @@ const RoutesApp = () => {
 			/>
 
 			<Route
-				path="/comprar/:id"
+				path="/vendas"
 				element={
 					<Private>
-						<Purchase />
+						<Sale />
 					</Private>
 				}
 			/>

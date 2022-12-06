@@ -64,12 +64,22 @@ const Products = () => {
 									<div className="square-image fix-width">
 										<img src={item.image} alt="motorbike" />
 									</div>
+
 									<div className="container-title font-bold fix-width">
 										<span className="name-bike">{item.name}</span>
 										<span className="brand-bike">{item.brand}</span>
 									</div>
-									<span className="font-bold fix-width">Cilindradas: </span>
-									{item.engine}cc
+
+									<span className="font-bold fix-width">
+										Cilindradas: {item.engine}cc
+									</span>
+
+									<div className="price">
+										{item.price?.toLocaleString("pt-br", {
+											style: "currency",
+											currency: "BRL",
+										})}
+									</div>
 								</div>
 
 								<Link

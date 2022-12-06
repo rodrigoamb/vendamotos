@@ -18,9 +18,9 @@ export const ContainerPurchase = styled.div`
 		padding: 20px;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+
 		text-transform: uppercase;
-		font-size: 1.5rem;
+		font-size: 1.1rem;
 		border-radius: 10px;
 		margin-bottom: 30px;
 

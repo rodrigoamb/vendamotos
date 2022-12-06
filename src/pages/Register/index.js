@@ -42,8 +42,9 @@ const Register = () => {
 	};
 
 	const handleAddBike = (data) => {
-		fetchPost(data);
+		data.price = Number(data.price);
 
+		fetchPost(data);
 		reset();
 	};
 
@@ -62,29 +63,54 @@ const Register = () => {
 							<form onSubmit={handleSubmit(handleAddBike)}>
 								<label>
 									<span>Nome da moto:</span>
-									<input type="text" name="name" {...register("name")} />
+									<input
+										type="text"
+										name="name"
+										{...register("name", { required: true })}
+									/>
 								</label>
 
 								<label>
 									<span>Marca:</span>
-									<input type="text" name="brand" {...register("brand")} />
+									<input
+										type="text"
+										name="brand"
+										{...register("brand", { required: true })}
+									/>
 								</label>
 
 								<label>
 									<span>Cilindradas:</span>
-									<input type="number" name="engine" {...register("engine")} />
+									<input
+										type="number"
+										name="engine"
+										{...register("engine", { required: true })}
+									/>
+								</label>
+
+								<label>
+									<span>Preço:</span>
+									<input
+										type="number"
+										name="price"
+										{...register("price", { required: true })}
+									/>
 								</label>
 
 								<label>
 									<span>URL da imagem:</span>
-									<input type="text" name="image" {...register("image")} />
+									<input
+										type="text"
+										name="image"
+										{...register("image", { required: true })}
+									/>
 								</label>
 
 								<label>
 									<span>Descrição:</span>
 									<textarea
 										name="description"
-										{...register("description")}
+										{...register("description", { required: true })}
 									></textarea>
 								</label>
 
