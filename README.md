@@ -52,6 +52,11 @@ Obs: Projeto criado com create-react-app
 
 A página será recarregada quando você fizer alterações.
 
+### 3º PASSO: Acesse a aplicação com login e senha:
+
+login: email@704apps.com
+senha: 123456
+
 Obrigado.
 
 Rodrigo Medeiros.
