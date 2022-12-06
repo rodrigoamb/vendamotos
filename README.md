@@ -38,12 +38,17 @@ Ideia de interface é:
 
 ## Instruções para rodar o projeto em ambiente de desenvolvimento:
 
-### 1º PASSO: Rodar no terminal `npm run server`
+### 1º PASSO: Clonar repositório e rodar no termina `npm install`
+
+Esse comando deverá rodar no terminal com o diretório da pasta do projeto, assim, o comando 'npm install' irá baixar todas as dependências do
+projeto de acordo com o arquivo package.json
+
+### 2º PASSO: Rodar no terminal `npm run server`
 
 Esse comando deverá rodar no terminal com o diretório da pasta do projeto, assim, o JSON-SERVER iniciará o servidor e então ocupará
 a porta Localhost:3000. O terminal deverá ser ocupado pelo JSON-SERVER.
 
-### 2º PASSO: Rodar no terminal `npm start`
+### 3º PASSO: Rodar no terminal `npm start`
 
 Abra um novo terminal na pasta do projeto e rode o comando 'npm start' para iniciar o REACTJS. Por padrão o REACTJS roda no localhost/3000,
 no entanto, a porta localhost/3000 estará ocupado pelo JSON-SERVER. Aperte "Y" para o REACTJS iniciar na porta localhost/3001
@@ -52,10 +57,12 @@ Obs: Projeto criado com create-react-app
 
 A página será recarregada quando você fizer alterações.
 
-### 3º PASSO: Acesse a aplicação com login e senha:
+### 4º PASSO: Acesse a aplicação com login e senha:
 
-login: email@704apps.com
-senha: 123456
+login:
+email@704apps.com
+senha:
+123456
 
 Obrigado.
 
