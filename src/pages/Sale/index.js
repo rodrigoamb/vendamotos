@@ -74,7 +74,7 @@ const Sale = () => {
 									</div>
 
 									<div>
-										Vendida em: {item.date.split("-").reverse().join("/")} -
+										Vendido em: {item.date.split("-").reverse().join("/")} -
 										Cliente: {item.client}{" "}
 									</div>
 								</div>

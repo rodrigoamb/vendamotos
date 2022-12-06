@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Teste técnico Front-end - 704apps dez/2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O presente projeto corresponde ao teste técnico para a empresa 704apps e para o desenvolvimento do teste foi utilizado :
 
-## Available Scripts
+1. ReactJS
+2. Styled-Components
+3. react-router-dom
+4. react-icons
+5. react-toastify
+6. JSON-SERVER
+7. react-hook-form
+8. firebase (auth)
 
-In the project directory, you can run:
+## Solicitação do teste para ser considerado completo:
 
-### `npm start`
+Construir um sistema de vendas de motos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ideia de interface é:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Tela de login
+- Menu com as opções listagem de motos, configurações de usuário, sair.
+- Tela de listagem de motos (foto, nome da moto, marca, cilindrada).
+- Tela de detalhes da moto (Passando a moto selecionada na anterior).
+- Tela de finalizar a compra (após a tela de detalhes, com o dados da compra), após finalizar a compra volta pra tela de listagem.
 
-### `npm test`
+## Conceitos utilizados:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-Componentes.
+-Utilização de rotas.
+-Consumindo API com Fetch.
+-Estilização com Styled-Components.
+-Formulários.
+-Responsividade.
+-uso do Local Storage.
+-Rotas.
+-Rotas privadas.
+-Entre outros conceitos.
 
-### `npm run build`
+## Instruções para rodar o projeto em ambiente de desenvolvimento:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1º PASSO: Rodar no terminal `npm run server`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Esse comando deverá rodar no terminal com o diretório da pasta do projeto, assim, o JSON-SERVER iniciará o servidor e então ocupará
+a porta Localhost:3000. O terminal deverá ser ocupado pelo JSON-SERVER.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2º PASSO: Rodar no terminal `npm start`
 
-### `npm run eject`
+Abra um novo terminal na pasta do projeto e rode o comando 'npm start' para iniciar o REACTJS. Por padrão o REACTJS roda no localhost/3000,
+no entanto, a porta localhost/3000 estará ocupado pelo JSON-SERVER. Aperte "Y" para o REACTJS iniciar na porta localhost/3001
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Obs: Projeto criado com create-react-app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A página será recarregada quando você fizer alterações.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Obrigado.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Rodrigo Medeiros.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -16,9 +16,11 @@ import { signOut } from "firebase/auth";
 
 //hooks react
 import { useEffect, useState } from "react";
+import SideMenu from "../SideMenu";
 
 const NavBar = () => {
 	const [email, setEmail] = useState("");
+	const [menuIsVisible, setMenuIsVisible] = useState(false);
 
 	useEffect(() => {
 		const verifyUser = () => {
@@ -43,51 +45,57 @@ const NavBar = () => {
 	}
 
 	return (
-		<ContainerNavBar>
-			<div className="limit-content">
-				<Link to={"/produtos"}>
-					<img src={logo} alt="logo Motorcycle" />
-				</Link>
+		<>
+			{menuIsVisible && <SideMenu setMenuIsVisible={setMenuIsVisible} />}
+			<ContainerNavBar>
+				<div className="limit-content">
+					<Link to={"/produtos"}>
+						<img src={logo} alt="logo Motorcycle" />
+					</Link>
 
-				<span>Usuário: {email}</span>
+					<span>Usuário: {email}</span>
 
-				<IoMdMenu className="icon-MenuBurger" />
+					<IoMdMenu
+						className="icon-MenuBurger"
+						onClick={() => setMenuIsVisible(true)}
+					/>
 
-				<nav>
-					<ul>
-						<li>
-							<Link to="/produtos" className="link-btn">
-								Lista de Motos
-							</Link>
-						</li>
+					<nav>
+						<ul>
+							<li>
+								<Link to="/produtos" className="link-btn">
+									Lista de Motos
+								</Link>
+							</li>
 
-						<li>
-							<Link to="/cadastro" className="link-btn">
-								Cadastrar Moto
-							</Link>
-						</li>
+							<li>
+								<Link to="/cadastro" className="link-btn">
+									Cadastrar Moto
+								</Link>
+							</li>
 
-						<li>
-							<Link to="/vendas" className="link-btn">
-								Vendas
-							</Link>
-						</li>
+							<li>
+								<Link to="/vendas" className="link-btn">
+									Vendas
+								</Link>
+							</li>
 
-						<li>
-							<Link to="/config" className="link-btn">
-								Configurações
-							</Link>
-						</li>
+							<li>
+								<Link to="/config" className="link-btn">
+									Configurações
+								</Link>
+							</li>
 
-						<li>
-							<Link onClick={handleLogout} className="link-btn">
-								Sair
-							</Link>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</ContainerNavBar>
+							<li>
+								<Link onClick={handleLogout} className="link-btn">
+									Sair
+								</Link>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</ContainerNavBar>
+		</>
 	);
 };
 
